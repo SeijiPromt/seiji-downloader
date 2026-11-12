@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>linkdrop</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<main class="shell">
+  <header class="head">
+    <h1>linkdrop</h1>
+    <p class="sub">paste a link. pick a format. take the file.</p>
+  </header>
+
+  <form id="form" class="bar" autocomplete="off">
+    <input id="url" type="url" placeholder="https://..." spellcheck="false" required />
+    <button id="go" type="submit">resolve</button>
+  </form>
+
+  <p id="status" class="status" hidden></p>
+
+  <section id="result" class="card" hidden>
+    <div class="meta">
+      <img id="thumb" class="thumb" alt="" hidden />
+      <div class="meta-text">
+        <h2 id="title"></h2>
+        <p id="byline" class="byline"></p>
+      </div>
+    </div>
+    <ul id="formats" class="formats"></ul>
+  </section>
+
+  <footer class="foot">
+    <span>self-hosted</span>
+    <span>·</span>
+    <span>yt-dlp core</span>
+  </footer>
+</main>
+<script src="/static/app.js"></script>
+</body>
+  </html>
